@@ -8,4 +8,30 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppLoginEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:maxLength">50</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">#bdbdbd</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="UserCommitButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:enabled">false</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:background">@drawable/button_user_commit_round_selector</item>
+        <item name="android:textColor">@drawable/text_color_user_button_commit_round</item>
+    </style>
 </resources>
