@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 nsvLoginRoot.getWindowVisibleDisplayFrame(rect);
                 int screenHeight = nsvLoginRoot.getRootView().getHeight();
                 int mainInvisibleHeight = screenHeight - rect.bottom;
+                // 未起作用  不知道为什么
                 if (mainInvisibleHeight > screenHeight / 4) {
                     nsvLoginRoot.scrollTo(0, rlLoginHeader.getHeight());
                 } else {
