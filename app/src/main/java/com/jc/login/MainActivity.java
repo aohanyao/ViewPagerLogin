@@ -6,9 +6,9 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ViewTreeObserver;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.jc.login.fragment.LoginFragment;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         final RelativeLayout rlLoginHeader = findViewById(R.id.rlLoginHeader);
-        final NestedScrollView nsvLoginRoot = findViewById(R.id.nsvLoginRoot);
+        final LinearLayout nsvLoginRoot = findViewById(R.id.nsvLoginRoot);
         nsvLoginRoot.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 nsvLoginRoot.getWindowVisibleDisplayFrame(rect);
                 int screenHeight = nsvLoginRoot.getRootView().getHeight();
                 int mainInvisibleHeight = screenHeight - rect.bottom;
-                // 未起作用  不知道为什么
+                // 大于 1/4 滚动过去
                 if (mainInvisibleHeight > screenHeight / 4) {
                     nsvLoginRoot.scrollTo(0, rlLoginHeader.getHeight());
                 } else {
